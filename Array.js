@@ -126,3 +126,15 @@
 // };
 // console.log(findWord("bu", ["button", "breakfast", "border"]));
 // console.log(findWord("tri", ["triplet", "tries", "trip", "piano", "tree"]));
+
+// !unique number
+// const unique = (array) => {
+// 	for (let i = 0; i < array.length; i++) {
+// 		if (array[i] !== array[i + 1] && array[i] !== array[i - 1])
+// 			return array[i];
+// 	}
+// };
+
+// console.log(unique([3, 3, 3, 7, 3, 3]));
+// console.log(unique([0, 0, 0.77, 0, 0]));
+// console.log(unique([0, 1, 1, 1, 1, 1, 1, 1]));
