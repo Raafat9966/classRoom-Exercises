@@ -47,16 +47,16 @@
 // console.log(isWhole([2, 2, 8, 8, 2, 8]));
 
 // !Deep comparison
-// let obj = { here: { is: "an" }, object: 2 };
-// const deepEqual = (obj1, obj2) =>
-// 	Object.values(obj1) === Object.values(obj2) &&
-// 	Object.keys(obj1) === Object.keys(obj2)
-// 		? true
-// 		: false;
+let obj = { here: { is: "an" }, object: 2 };
+const deepEqual = (obj1, obj2) =>
+	Object.values(obj1).toString() === Object.values(obj2).toString() &&
+	Object.keys(obj1).toString() === Object.keys(obj2).toString()
+		? true
+		: false;
 
-// console.log(deepEqual(obj, obj));
-// // → true
-// console.log(deepEqual(obj, { here: 1, object: 2 }));
-// // → false
-// console.log(deepEqual(obj, { here: { is: "an" }, object: 2 }));
-// // → true
+console.log(deepEqual(obj, obj));
+// → true
+console.log(deepEqual(obj, { here: 1, object: 2 }));
+// → false
+console.log(deepEqual(obj, { here: { is: "an" }, object: 2 }));
+// → true

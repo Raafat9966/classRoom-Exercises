@@ -1,6 +1,6 @@
 // const lodash = require("./lodash");
 
-// // !Deep Compare
+// !Deep Compare
 // const person = {
 // 	name: "human",
 // 	age: 55,
@@ -9,7 +9,7 @@
 // };
 
 // const clone = lodash.cloneDeep(person);
-// // person.name = "Raafat";
+// person.name = "Raafat";
 // const deepCompare = (obj1, obj2) => {
 // 	if (JSON.stringify(obj1) === JSON.stringify(obj2)) return true;
 // 	else return false;
@@ -22,6 +22,6 @@
 // 	Object.entries(obj1).toString() === Object.entries(obj2).toString();
 // console.log(deepCompareWithObject(person, clone));
 
-// // !Deep Clone
+// !Deep Clone
 // const deepClone = (obj) => lodash.cloneDeep(obj);
 // console.log(deepClone(person));
