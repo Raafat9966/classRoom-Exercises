@@ -25,3 +25,17 @@
 // !Deep Clone
 // const deepClone = (obj) => lodash.cloneDeep(obj);
 // console.log(deepClone(person));
+
+// const person = {
+// 	name: "human",
+// 	age: 55,
+// 	mission: "driver",
+// 	ID: 0110100001110101011011010110000101101110,
+// 	nice: {
+// 		a: 1,
+// 	},
+// };
+// let newPerson = JSON.parse(JSON.stringify(person));
+// person.name = "not human";
+// person.nice.a = 2;
+// console.log(`person:\n ${JSON.stringify(newPerson)}`);

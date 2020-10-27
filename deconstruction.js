@@ -43,3 +43,35 @@
 // 	)}`;
 // };
 // console.log(showBand(band));
+
+// !We have an object
+// let user = {
+// 	name: "John",
+// 	years: 30,
+// };
+
+// let { name, years: age, isAdmin = false } = user;
+// console.log(name);
+// console.log(age);
+// console.log(isAdmin);
+
+// !The maximal salary
+
+// let salaries = {
+// 	John: 100,
+// 	Pete: 300,
+// 	Mary: 250,
+// };
+// const topSalary = (obj) => {
+// 	let maxSalary = 0;
+// 	let maxName = null;
+
+// 	for (let [name, salary] of Object.entries(obj)) {
+// 		if (maxSalary < salary) {
+// 			maxSalary = salary;
+// 			maxName = name;
+// 		}
+// 	}
+// 	return maxName;
+// };
+// console.log(topSalary(salaries));
