@@ -102,9 +102,7 @@
 
 // !nestArrays(currDepth, maxDepth)
 const nestArray = (currDepth, maxDepth) => {
-	if (currDepth == maxDepth) {
-		return [currDepth];
-	}
+	if (currDepth == maxDepth) return [currDepth];
 	return [currDepth, nestArray(currDepth + 1, maxDepth)];
 };
 
@@ -151,12 +149,3 @@ console.log(`the nested array = ${JSON.stringify(nestArray(0, 2))}`);
 // 	return arr;
 // };
 // console.log(lowToHigh(["Frankel", "Leon", "Ale", "Jenna", "Bleda", "Hadi"]));
-
-// function nestArrays(cur, max) {
-// 	if (cur == max) return [cur]; // early bailout / termination of the recursion
-
-// 	// cur+1 => incrementation / altered state
-// 	return [cur, nestArrays(cur + 1, max)];
-// }
-
-// console.log(nestArrays(0, 2));
