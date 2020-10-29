@@ -101,27 +101,27 @@
 // doggo.loopFood;
 
 // !nestArrays(currDepth, maxDepth)
-const nestArray = (currDepth, maxDepth) => {
-	if (currDepth == maxDepth) {
-		return [currDepth];
-	}
-	return [currDepth, nestArray(currDepth + 1, maxDepth)];
-};
+// const nestArray = (currDepth, maxDepth) => {
+// 	if (currDepth == maxDepth) {
+// 		return [currDepth];
+// 	}
+// 	return [currDepth, nestArray(currDepth + 1, maxDepth)];
+// };
 
-console.log(`the nested array = ${JSON.stringify(nestArray(0, 2))}`);
+// console.log(`the nested array = ${JSON.stringify(nestArray(0, 2))}`);
 
 // !nestObjects(currDepth, maxDepth)
 // const nestObjects = (currDepth, maxDepth) => {
 // 	if (currDepth == maxDepth)
-// 		return (theObject = {
+// 		return {
 // 			currDepth: currDepth,
 // 			nestedObj: null,
-// 		});
+// 		};
 
-// 	return (theObject = {
+// 	return {
 // 		currDepth: currDepth,
 // 		nestedObj: nestObjects(currDepth + 1, maxDepth),
-// 	});
+// 	};
 // };
 
 // console.log(`the nested object = ${JSON.stringify(nestObjects(0, 2))}`);
@@ -130,26 +130,19 @@ console.log(`the nested array = ${JSON.stringify(nestArray(0, 2))}`);
 // const lowToHigh = (arr) => {
 // 	for (var i = 1; i < arr.length; i++)
 // 		for (var j = 0; j < i; j++)
-// 			if (arr[i] < arr[j]) {
-// 				let swap = arr[i];
-// 				arr[i] = arr[j];
-// 				arr[j] = swap;
-// 			}
+// 			if (arr[i] < arr[j]) [arr[i], arr[j]] = [arr[j], arr[i]];
 // 	return arr;
 // };
 // console.log(lowToHigh([4, 2, 5, 3, 9, 7, 1, 8, 2, 6]));
 // console.log(lowToHigh(["Fran", "Leon", "Ale", "Jenna", "Bleda", "Hadi"]));
 
+// !sorting on string length
 // const lowToHigh = (arr) => {
 // 	for (var i = 1; i < arr.length; i++)
 // 		for (var j = 0; j < i; j++)
 // 			if (arr[i].length < arr[j].length) {
-// 				let swap = arr[i];
-// 				arr[i] = arr[j];
-// 				arr[j] = swap;
+// 				[arr[i], arr[j]] = [arr[j], arr[i]];
 // 			}
 // 	return arr;
 // };
 // console.log(lowToHigh(["Frankel", "Leon", "Ale", "Jenna", "Bleda", "Hadi"]));
-
-
