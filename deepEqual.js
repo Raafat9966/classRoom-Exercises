@@ -35,6 +35,7 @@ const person = {
 		a: 1,
 	},
 	arr: [1, 2, 3],
+	test: null,
 };
 // let newPerson = JSON.parse(JSON.stringify(person));
 // person.name = "not human";
@@ -43,19 +44,14 @@ const person = {
 
 const deepCopyFunction = (inObject) => {
 	let outObject, value, key;
-
 	if (typeof inObject !== "object" || inObject === null) {
 		return inObject;
 	}
-
 	outObject = Array.isArray(inObject) ? [] : {};
-
 	for (key in inObject) {
 		value = inObject[key];
-
 		outObject[key] = deepCopyFunction(value);
 	}
-
 	return outObject;
 };
 let clone = deepCopyFunction(person);
