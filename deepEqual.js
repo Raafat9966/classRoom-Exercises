@@ -58,4 +58,5 @@ const deepCopyFunction = (inObject) => {
 
 	return outObject;
 };
-console.log(deepCopyFunction(person));
+let clone = deepCopyFunction(person);
+console.log(clone);
