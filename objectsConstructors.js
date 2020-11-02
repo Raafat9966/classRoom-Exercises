@@ -17,27 +17,20 @@
 // !Getter and Setter
 var o = {
 	a: 7,
-	get b() {
-		return this.a + 1;
-	},
-	set c(x) {
-		this.a = x / 2;
-	},
 };
 Object.defineProperty(o, "add", {
 	get: function add() {
 		return this.a * 2;
 	},
 });
-Object.defineProperty(o, "half", {
-	set: function half(x) {
-		return (this.b = this.a + x);
+Object.defineProperty(o, "changeValue", {
+	set: function changeValue(x) {
+		this.a = x;
 	},
 });
 
 console.log(o.add);
-o.x = 2;
-console.log(o.b);
+o.changeValue = 2;
 o.__defineGetter__("printNumber", function () {
 	console.log(this.a);
 });
@@ -46,7 +39,6 @@ o.__defineSetter__("addNumber", function (x) {
 	return (this.sumNumber = this.a + x);
 });
 o.addNumber = 3;
-console.log(o.addNumber);
 console.log(o.sumNumber);
 
 // !Sum of Squares
