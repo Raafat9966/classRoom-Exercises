@@ -26,7 +26,7 @@
 // const deepClone = (obj) => lodash.cloneDeep(obj);
 // console.log(deepClone(person));
 
-const person = {
+let person = {
 	name: "human",
 	age: 55,
 	mission: "driver",
