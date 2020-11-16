@@ -4,19 +4,17 @@ class PGroup {
 		this.num = num;
 	}
 
-	has(value) {
-		return this.num.includes(value);
-	}
+	has = (val) => this.num.includes(val);
 
-	add(value) {
-		if (this.has(value)) return this;
-		return new PGroup(this.num.concat([value]));
-	}
+	add = (val) => {
+		if (this.has(val)) return this;
+		return new PGroup(this.num.concat([val]));
+	};
 
-	delete(value) {
-		if (!this.has(value)) return this;
-		return new PGroup(this.num.filter((m) => m !== value));
-	}
+	delete = (val) => {
+		if (!this.has(val)) return this;
+		return new PGroup(this.num.filter((x) => x !== val));
+	};
 }
 
 PGroup.empty = new PGroup([]);
