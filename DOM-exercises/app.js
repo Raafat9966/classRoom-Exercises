@@ -1,5 +1,5 @@
-const randomNumber = (() => {
-	let number = Math.floor(Math.random() * 10) + 1;
+const randomNumber = () => {
+	let number = Math.floor(Math.random() * 3) + 1;
 	let attempts = 2;
 	let guess = window.prompt(
 		"Guess a number between 1 - 10, you have 3 attempts"
@@ -19,4 +19,5 @@ const randomNumber = (() => {
 		return window.alert(
 			`sorry, you failed to guess the number. the number was ${number}!`
 		);
-})();
+};
+randomNumber();
