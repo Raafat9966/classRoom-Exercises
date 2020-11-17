@@ -22,3 +22,7 @@ const randomNumber = () => {
 			`sorry, you failed to guess the number. the number was ${number}!`
 		);
 };
+<<<<<<< HEAD
+=======
+randomNumber();
+>>>>>>> 94c11934692b7f567bc7c2775dcde255c4ebb04a
