@@ -1,13 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@605&family=Indie+Flower&display=swap");
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: "Indie Flower", cursive;
 }
 body {
-	background: rgb(87, 212, 243);
-	font-family: "Indie Flower", cursive;
+	background: rgb(209, 209, 209);
 }
 .container {
 	flex-flow: column nowrap;
@@ -19,9 +18,11 @@ body {
 	color: #a10099;
 	text-align: center;
 	font-size: 3rem;
+	text-shadow: 1px 1px 2px rgb(39, 0, 49);
 }
 .reset {
 	font-weight: bold;
+	font-size: 1rem;
 	margin: 20px;
 	background-color: rgb(255, 238, 0);
 	border: none;
@@ -30,6 +31,7 @@ body {
 	padding: 10px;
 	cursor: pointer;
 	outline: none;
+	box-shadow: 1px 1px 2px 2px rgb(173, 173, 173);
 }
 .reset:active {
 	box-shadow: inset 1px 1px 2px 2px rgb(173, 173, 173);
@@ -43,6 +45,7 @@ body {
 	font-size: 4rem;
 }
 .cell {
+	font-family: "Caveat", cursive;
 	color: rgb(255, 0, 200);
 	display: flex;
 	justify-content: center;
@@ -74,7 +77,8 @@ body {
 }
 
 .winner {
-	color: #860000;
+	color: rgb(225, 0, 255);
 	margin: 15px;
 	font-size: 2rem;
+	text-shadow: 1px 1px 2px rgb(17, 16, 4);
 }

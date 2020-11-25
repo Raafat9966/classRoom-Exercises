@@ -15,10 +15,10 @@ cells.forEach((cell) => {
 		}
 		if (checkWinner(cells)) {
 			let result = checkWinner(cells);
-			winner.innerHTML = `The Player ${result} has won!`;
+			winner.innerHTML = `Player ${result} has won!`;
 			cells.forEach((cell) => (cell.innerHTML = result));
 		} else if (counter === 9) {
-			winner.innerHTML = `Draw, try Again!`;
+			winner.innerHTML = `It's a tie, try again!`;
 		}
 	});
 });
