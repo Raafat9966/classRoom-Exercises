@@ -1,8 +1,17 @@
 // Work on your tasks here
+
 $(function () {
-	// $("#modal").on("show.bs.modal", function (event) {
-	// 	let modalInstance = $(event.target).data("modal");
-	// 	let modal = $(this);
-	// 	modal.find(".modal").text(`worked ${modalInstance}`);
-	// });
+	$(".teapot").click(function () {
+		$(this).toggleClass("teapot-rotate");
+	});
+	$(".tea-desc").mouseenter(function () {
+		$(this).text(randomPhrase());
+	});
 });
+const phrases = [
+	"A cup of tea a day",
+	"Nice cup of tea on the breakfast",
+	"Hot tea for the cold",
+	"delicious with a cake",
+];
+const randomPhrase = () => phrases[Math.floor(Math.random() * phrases.length)];
