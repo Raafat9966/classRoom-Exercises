@@ -91,7 +91,7 @@
 // };
 // console.log(temperatureConverter(60, 45));
 
-console.log("\u2622 \u2623 \u2622 \u2623 \u2622 \u2623 \u2622");
+// console.log("\u2622 \u2623 \u2622 \u2623 \u2622 \u2623 \u2622");
 
 // !Declaring Functions
 // function Multiply(number1, number2) {
