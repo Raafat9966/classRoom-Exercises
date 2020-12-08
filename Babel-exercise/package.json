@@ -8,11 +8,12 @@
 		"build": "babel src -d js"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "me",
 	"license": "ISC",
 	"devDependencies": {
 		"@babel/cli": "^7.12.8",
 		"@babel/core": "^7.12.9",
 		"@babel/preset-env": "^7.12.7"
-	}
+	},
+	"dependencies": {}
 }
