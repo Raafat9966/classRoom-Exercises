@@ -30,29 +30,22 @@ $(function () {
 			);
 	};
 
-	//console.log(calculateAspectRatio(2, 3, 4, "h"));
-	$("ratio").change(function (event) {
+	$(".ratio.result").on("input", function (event) {
 		let [val1, val2] = [$("#ratio_1")[0].value, $("#ratio_2")[0].value];
-		// if (event.target.id === "ratio_result-height") {
-		// 	$("#ratio_result-height")[0].value = calculateAspectRatio(
-		// 		val1,
-		// 		val2,
-		// 		$("#ratio_result-width")[0].value,
-		// 		"w"
-		// 	);
-		// } else if (event.target.id === "ratio_result-width") {
-			// $("#ratio_result-width")[0].value = calculateAspectRatio(
-			// 	val1,
-			// 	val2,
-			// 	$("#ratio_result-height")[0].value,
-			// 	"h"
-            // );
-            console.log(calculateAspectRatio(
-                	val1,
-                	val2,
-                	$("#ratio_result-height")[0].value,
-                	"h"
-                ));
+		if (event.target.id === "ratio_result-height") {
+			$("#ratio_result-width")[0].value = calculateAspectRatio(
+				val1,
+				val2,
+				$("#ratio_result-height")[0].value,
+				"h"
+			);
+		} else {
+			$("#ratio_result-height")[0].value = calculateAspectRatio(
+				val1,
+				val2,
+				$("#ratio_result-width")[0].value,
+				"w"
+			);
 		}
 	});
 });
