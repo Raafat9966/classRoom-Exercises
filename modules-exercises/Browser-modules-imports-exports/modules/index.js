@@ -30,6 +30,7 @@ $(function () {
 			);
 	};
 
+	//console.log(calculateAspectRatio(2, 3, 4, "h"));
 	$(".ratio.result").on("input", function (event) {
 		let [val1, val2] = [$("#ratio_1")[0].value, $("#ratio_2")[0].value];
 		if (event.target.id === "ratio_result-height") {
