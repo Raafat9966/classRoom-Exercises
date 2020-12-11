@@ -1,24 +1,25 @@
-import "../styles/main.scss";
-import "babel-polyfill"
+//import "../styles/main.scss";
+//import "babel-polyfill";
 
-const modal = document.getElementById("myModal");
-let promiseOfModal = new Promise(function (resolve) {
-    window.setTimeout(function () {
-        resolve(modal)
-    }, (1000 * 60));
-});
+const runModal = async function () {
+	await window.setTimeout(() => {
+		document.querySelector(".modal").style.display = "block";
+	}, 6000);
+	await document.querySelector(".close").addEventListener("click", () => {
+		document.querySelector(".modal").style.display = "none";
+	});
+};
+runModal();
 
-promiseOfModal.then(function(val) {
-    console.log("User has been on the page for 60 seconds");
-    val.style.display = "block";
-})
-
-modal.addEventListener("click", (e) => {
-    switch(e.target.className) {
-        case "close":
-        case "modal":
-        modal.style.display = "none"
-        break;
-    }
-})
-
+const btnHover = async function () {
+	const hoverRun = await function () {
+		window.setTimeout(() => {
+			document.querySelector("#continue").style.backgroundColor = "grey";
+			alert("Continue to subscribe");
+		}, 400);
+	};
+	document
+		.querySelector("#continue")
+		.addEventListener("mouseleave", hoverRun);
+};
+btnHover();
