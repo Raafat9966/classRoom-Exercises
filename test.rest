@@ -1,0 +1,13 @@
+GET https://5fd739629dd0db0017ee8f5c.mockapi.io/users
+
+###
+POST https://5fd739629dd0db0017ee8f5c.mockapi.io/users
+content-type: application/json
+
+{
+    "createdAt": "2021-10-27T05:59:26.135Z",
+    "name": "Iulia"
+}
+
+###
+DELETE https://5fd739629dd0db0017ee8f5c.mockapi.io/users/26
