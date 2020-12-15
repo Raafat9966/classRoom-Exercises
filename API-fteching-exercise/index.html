@@ -10,12 +10,34 @@
 			<ol></ol>
 		</div>
 		<script>
+			const data = {
+				id: "23",
+				createdAt: "2021-08-16T16:04:17.108Z",
+				name: "Raafat Basheer",
+			};
+
+			//POST request with body equal on data in JSON format
+			fetch("https://5fd739629dd0db0017ee8f5c.mockapi.io/users", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			})
+				.then((response) => response.json())
+				//Then with the data from the response in JSON...
+				.then((data) => {
+					console.log("Success:", data);
+				})
+				//Then with the error generated...
+				.catch((error) => {
+					console.error("Error:", error);
+				});
 			let ol = document.querySelector("ol");
 			fetch("https://5fd739629dd0db0017ee8f5c.mockapi.io/users")
 				.then((response) => response.json())
 				.then((data) => {
 					return data.map((user) => {
-						console.log(user);
 						ol.innerHTML += `<li><ul>
                             <li>${user.name}</li><li>${user.createdAt}</li></ul></li>`;
 					});
