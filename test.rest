@@ -1,12 +1,14 @@
-GET https://5fd739629dd0db0017ee8f5c.mockapi.io/users
+GET https://sheet2api.com/v1/G8m99f5BQ0uj/sheet-to-api/data-sheet
 
 ###
-POST https://5fd739629dd0db0017ee8f5c.mockapi.io/users
+POST https://sheet2api.com/v1/G8m99f5BQ0uj/sheet-to-api/data-sheet
 content-type: application/json
 
 {
-    "createdAt": "2021-10-27T05:59:26.135Z",
-    "name": "Iulia"
+    "Date": "2021-10-27",
+    "High": "325.35362",
+    "Low": "124.5466",
+    "Volume": "753646567"
 }
 
 ###

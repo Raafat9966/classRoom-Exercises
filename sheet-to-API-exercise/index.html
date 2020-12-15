@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>sheet to API</title>
+	</head>
+	<body>
+		<table id="data-sheet">
+			<tr>
+				<th>Date</th>
+				<th>High</th>
+				<th>Low</th>
+				<th>Volume</th>
+			</tr>
+		</table>
+		<form
+			data-spreadsheet-api="https://sheet2api.com/v1/G8m99f5BQ0uj/sheet-to-api/data-sheet"
+		>
+			<input type="text" name="Date" placeholder="Date" />
+			<input type="text" name="High" placeholder="High" />
+			<input type="text" name="Low" placeholder="Low" />
+			<input type="text" name="Volume" placeholder="Volume" />
+			<button type="submit" onClick="alert('Submitted')">Submit</button>
+		</form>
+		<script src="sheet-post.js"></script>
+		<script src="app.js"></script>
+	</body>
+</html>
