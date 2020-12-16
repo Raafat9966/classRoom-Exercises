@@ -1,4 +1,5 @@
-GET https://sheet2api.com/v1/G8m99f5BQ0uj/sheet-to-api/data-sheet
+GET http://www.omdbapi.com/?t=batman&apikey=4a510e0d
+
 
 ###
 POST https://sheet2api.com/v1/G8m99f5BQ0uj/sheet-to-api/data-sheet
