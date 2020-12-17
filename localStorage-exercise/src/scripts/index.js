@@ -7,32 +7,27 @@ let showMovies = new View();
 let searchInput = $("#input");
 let movieStorage = new Set();
 
-// window.onload = () => {
-// 	if (JSON.parse(localStorage.getItem("moviesList")).length > 0) {
-// 		JSON.parse(localStorage.getItem("moviesList")).forEach((movie) => {
-// 			showMovies.displayMovieOnPage(movie);
-// 		});
-// 	}
-// };
+window.onload = () => {
+	console.log(JSON.parse(localStorage.getItem("moviesList")));
+	for (let movie in JSON.parse(localStorage.getItem("moviesList"))) {
+		showMovies.displayMovieOnPage(movie);
+	}
+};
 
 searchInput.on("keypress", async (e) => {
 	if (e.which == 13) {
 		let movies = await api.getMovieData(e.target.value);
-
-		console.log(movies);
-
-		movieStorage.add(movies);
-		for (let movie of movieStorage) {
-			console.log(movieStorage);
-			showMovies.displayMovieOnPage(movie);
+		if (movieStorage.has(JSON.stringify(movies))) {
+			alert("The movie has been found");
+		} else {
+			movieStorage.add(JSON.stringify(movies));
+			showMovies.displayMovieOnPage(movies);
 		}
 	}
 });
 
 $(".btn-save").on("click", () => {
-	console.log([...movieStorage]);
-	localStorage.setItem("moviesList", [...movieStorage]);
-	//console.log(JSON.parse(localStorage.getItem("moviesList")));
+	localStorage.setItem("moviesList", JSON.stringify(movieStorage));
 });
 
 $(".btn-reset").on("click", () => {
