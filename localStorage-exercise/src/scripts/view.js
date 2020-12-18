@@ -16,7 +16,6 @@ export class View {
                     <p>Run time: ${data.Runtime}</p>
                     <p>Rated: ${data.Rated}</p>
                 </section>
-                <p>${data.Plot}</p>
             </section>`
 			);
 		}
