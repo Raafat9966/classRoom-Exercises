@@ -1,5 +1,7 @@
 :root {
-  font-size: 2rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 1.2rem;
 }
 
 * {
@@ -51,8 +53,9 @@
 }
 
 .movie-display {
-  width: 9rem;
+  width: 5rem;
   border: 1px solid black;
+  border-radius: 5px;
   padding: 1rem;
   margin: 1rem;
 }
@@ -61,11 +64,6 @@
   .movie-display {
     width: 15rem;
   }
-}
-
-.movie-meta {
-  border-bottom: 1px solid black;
-  margin-bottom: 0.25rem;
 }
 
 .buttons {

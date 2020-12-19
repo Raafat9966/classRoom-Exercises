@@ -7,19 +7,14 @@ let showMovies = new View();
 let searchInput = $("#input");
 let movieStorage = new Set();
 
-// window.onload = () => {
-// 	console.log(JSON.parse(localStorage.getItem("moviesList")));
-// 	if (localStorage.getItem("movieList") != null) {
-// 		movieStorage = [
-// 			...new Set(JSON.parse(localStorage.getIte("moviesList"))),
-// 		];
-// 		movieStorage.forEach((movie) => showMovies.displayMovieOnPage(movie));
-// 	}
-// 	console.log(movieStorage);
-// 	// JSON.parse(localStorage.getItem("moviesList")).forEach((movie) => {
-// 	// 	showMovies.displayMovieOnPage(movie);
-// 	// });
-// };
+window.onload = () => {
+	console.log(JSON.parse(localStorage.getItem("moviesList")));
+	if (JSON.parse(localStorage.getItem("moviesList")) != null) {
+		JSON.parse(localStorage.getItem("moviesList")).forEach((movie) =>
+			showMovies.displayMovieOnPage(JSON.parse(movie))
+		);
+	}
+};
 
 searchInput.on("keypress", async (e) => {
 	if (e.which == 13) {
