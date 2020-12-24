@@ -8,7 +8,6 @@ let searchInput = $("#input");
 let movieStorage = new Set();
 
 window.onload = () => {
-	console.log(JSON.parse(localStorage.getItem("moviesList")));
 	if (JSON.parse(localStorage.getItem("moviesList")) != null) {
 		JSON.parse(localStorage.getItem("moviesList")).forEach((movie) =>
 			showMovies.displayMovieOnPage(JSON.parse(movie))
@@ -19,7 +18,6 @@ window.onload = () => {
 searchInput.on("keypress", async (e) => {
 	if (e.which == 13) {
 		let movies = await api.getMovieData(e.target.value);
-
 		if (movieStorage.has(JSON.stringify(movies))) {
 			alert("the movie is already added");
 		}
@@ -32,9 +30,7 @@ searchInput.on("keypress", async (e) => {
 });
 
 $(".btn-save").on("click", () => {
-	console.log(movieStorage);
 	localStorage.setItem("moviesList", JSON.stringify([...movieStorage]));
-	console.log(JSON.parse(localStorage.getItem("moviesList")));
 });
 
 $(".btn-reset").on("click", () => {
