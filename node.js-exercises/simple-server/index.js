@@ -3,14 +3,13 @@ const http = require("http");
 const fs = require("fs");
 
 const server = http.createServer((request, response) => {
+	response.statusCode = 200;
+	let keyboard = fs.readFileSync(path.join(__dirname, "keyboard.txt"));
 	if (request.url === "/keyboard") {
-		let keyboard = fs.readFileSync(path.join(__dirname, "keyboard.txt"));
-		response.statusCode = 200;
 		response.setHeader("Content-Type", "text/plain");
 		response.end(keyboard);
 	}
 	if (request.url === "/blog") {
-		response.statusCode = 200;
 		response.setHeader("Content-Type", "text/html");
 		response.end("<h1>This is my blog</h1>");
 	} else {
