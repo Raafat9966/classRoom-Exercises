@@ -11,6 +11,9 @@ const option = {
 
 axios(option)
 	.then((res) => {
-		console.log(res.data);
+		let temp = (res.data.main.temp / 32).toFixed(2);
+		console.log(
+			`It is now ${temp}°C in ${city}, DE. The current weather conditions are: ${res.data.weather[0].description}`
+		);
 	})
 	.catch((err) => console.log(err));
