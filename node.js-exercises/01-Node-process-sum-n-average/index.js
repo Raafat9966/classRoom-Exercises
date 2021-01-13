@@ -1,10 +1,10 @@
 let calcArgs = process.argv.slice(2);
-let operationArgs = calcArgs[0];
-let numbersArgs = calcArgs.slice(1);
-let arrayNumbers = numbersArgs.map((number) => parseInt(number));
-console.log(arrayNumbers);
-const calculator = (operation, numbers) => {
-	for (number of numbers) {
+let [operationArgs, ...numbersArgs] = calcArgs;
+
+const calculator = (() => {
+	let arrayNumbers = numbersArgs.map((number) => parseInt(number));
+	console.log(arrayNumbers);
+	for (number of arrayNumbers) {
 		if (isNaN(number)) {
 			console.log(
 				`Sorry, one of the arguments is not a number, please try again`
@@ -13,18 +13,20 @@ const calculator = (operation, numbers) => {
 		}
 	}
 
-	switch (operation) {
+	switch (operationArgs) {
 		case "sum":
-			console.log(numbers.reduce((acc, n) => acc + n, 0));
+			console.log(arrayNumbers.reduce((acc, n) => acc + n, 0));
 			break;
 		case "avg":
-			console.log(numbers.reduce((a, b) => a + b) / numbers.length);
+			console.log(
+				arrayNumbers.reduce((a, b) => a + b) / arrayNumbers.length
+			);
 			break;
 		case "med":
-			const mid = Math.floor(numbers.length / 2),
-				nums = [...numbers].sort((a, b) => a - b);
+			const mid = Math.floor(arrayNumbers.length / 2),
+				nums = [...arrayNumbers].sort((a, b) => a - b);
 			console.log(
-				numbers.length % 2 !== 0
+				arrayNumbers.length % 2 !== 0
 					? nums[mid]
 					: (nums[mid - 1] + nums[mid]) / 2
 			);
@@ -34,5 +36,4 @@ const calculator = (operation, numbers) => {
 				"I cannot calculate that, please type either 'sum' (to calculate the sum) or 'avg' (To calculate the Average)"
 			);
 	}
-};
-calculator(operationArgs, arrayNumbers);
+})();
