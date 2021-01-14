@@ -13,7 +13,7 @@ let dataBasePosts = db.get("posts");
 let dataBaseUsers = db.get("users");
 
 app.get("/", (req, res) => {
-	res.send("<h1>Express Server running</h1>");
+	res.send("<h1>Express Server is running</h1>");
 });
 
 app.get("/posts", (req, res) => {
@@ -36,4 +36,6 @@ app.get("/posts/:id", (req, res) => {
 	});
 });
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(port, () =>
+	console.log(`Server running on  http://localhost:${port}`)
+);
