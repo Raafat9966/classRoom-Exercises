@@ -1,0 +1,10 @@
+GET http://localhost:5000/me
+
+###
+POST http://localhost:5000/sign-in
+content-type: application/json
+
+{
+    "IBAN": "DE000000000",
+    "pinCode": 1234
+  }

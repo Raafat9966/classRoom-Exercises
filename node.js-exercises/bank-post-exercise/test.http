@@ -1,0 +1,13 @@
+GET http://localhost:5000/authentication
+
+###
+POST http://localhost:5000/authentication
+content-type: application/json
+
+{
+    "IBAN":"DE000000000",
+    "picode":"1234"
+}
+
+###
+POST http://localhost:5000/transfer
