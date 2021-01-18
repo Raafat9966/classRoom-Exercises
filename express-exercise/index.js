@@ -2,15 +2,21 @@ const express = require("express");
 const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
 const http = require("http");
+const fs = require("fs");
+// const { Stream } = require("stream");
 
 const app = express();
 const port = 3000;
 // app.use(express.json());
 
-const server = http.createServer((req, res) => {
-	const stream = fs.createReadStream(__dirname + "/database.json");
-	stream.pipe(res);
+const stream = fs.createReadStream(__dirname + "/database.json", "utf8");
+stream.on("data", (chunk) => {
+	console.log(`new chunk received`);
+	console.log(chunk);
 });
+// const server = http.createServer((req, res) => {
+
+// });
 
 // const adapter = new FileSync("database.json");
 // const db = low(adapter);
@@ -42,6 +48,6 @@ const server = http.createServer((req, res) => {
 // 	});
 // });
 
-app.listen(port, () =>
-	console.log(`Server running on  http://localhost:${port}`)
-);
+// app.listen(port, () =>
+// 	console.log(`Server running on  http://localhost:${port}`)
+// );
