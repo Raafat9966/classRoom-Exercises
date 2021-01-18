@@ -32,7 +32,7 @@ app.post("/login", (req, res) => {
 	if (req.body.username == "admin" && req.body.password == "secret") {
 		res.status(200).send(" Hi Boss!");
 	} else {
-		res.status(200).send(" I do not know you!!!");
+		res.status(400).send(" I do not know you!!!");
 	}
 });
 
