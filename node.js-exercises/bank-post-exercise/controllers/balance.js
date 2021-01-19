@@ -5,7 +5,7 @@ const adapter = new FileSync("./database/data.json");
 const db = low(adapter);
 
 const balance = (req, res) => {
-	const user = db.get("user").find({ token: res.locals.token }).value();
+	const user = db.get("users").find({ token: res.locals.token }).value();
 	if (res.locals.token == user.token)
 		res.status(200).send(`Your balance is: ${user.amount}`);
 };

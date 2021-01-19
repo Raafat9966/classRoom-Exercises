@@ -5,7 +5,7 @@ const adapter = new FileSync("./database/data.json");
 const db = low(adapter);
 
 const userToken = (req, res, next) => {
-	const user = db.get("user").find({ token: res.locals.token }).value();
+	const user = db.get("users").find({ token: res.locals.token }).value();
 
 	if (!user) return res.status(400).send(`The token is invalid, try again`);
 	next();

@@ -5,9 +5,9 @@ const adapter = new FileSync("./database/data.json");
 const db = low(adapter);
 
 const transfer = (req, res) => {
-	const user = db.get("user").find({ token: res.locals.token }).value();
+	const user = db.get("users").find({ token: res.locals.token }).value();
 
-	db.get("user")
+	db.get("users")
 		.find({ token: res.locals.token })
 		.set("amount", +res.locals.amount + user.amount)
 		.write();
