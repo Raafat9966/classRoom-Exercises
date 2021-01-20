@@ -13,4 +13,4 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.post("/login", login);
 app.use("/", checkToken, userToken, operations());
 
-app.listen(port, () => console.log(`Server run on: http://localhost/${port}`));
+app.listen(port, () => console.log(`Server run on: http://localhost:${port}`));
