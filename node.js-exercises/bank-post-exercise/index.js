@@ -10,7 +10,11 @@ let port = 5000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use((req, res) => {
+	res.status(404).send("404 - Page not Found");
+});
+
 app.post("/login", login);
 app.use("/", checkToken, userToken, operations());
 
-app.listen(port, () => console.log(`Server run on: http://localhost/${port}`));
+app.listen(port, () => console.log(`Server run on: http://localhost:${port}`));
