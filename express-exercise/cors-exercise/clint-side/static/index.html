@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<title>CORS API</title>
+	</head>
+	<body>
+		<h3>fetching json from cors server</h3>
+		<pre></pre>
+	</body>
+	<script>
+		let element = document.querySelector("pre");
+
+		fetch("http://localhost:3000/api/user")
+			.then((res) => res.text())
+			.then((data) => {
+				console.log(typeof data);
+				$("pre").load("http://localhost:3000/api/user p");
+				//element.innerHTML = data;
+			})
+			.catch((err) => {
+				alert(`{error: ${err.name}, message: ${err.message}}`);
+			});
+	</script>
+</html>
