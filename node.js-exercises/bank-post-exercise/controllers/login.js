@@ -14,9 +14,11 @@ const login = (req, res) => {
 			res.status(400).send(`the user already exited, try to login!!!`);
 		else {
 			let token = uuidv4();
-			res.status(200).send({ account: req.body, token: token });
+			res.cookie("token", token)
+				.status(200)
+				.send({ account: req.body, token: token });
 			db.get("users")
-				.push({ IBAN: IBAN, pin: pin, token: token, amount: 1000 })
+				.unshift({ IBAN: IBAN, pin: pin, token: token, amount: 1000 })
 				.write();
 		}
 	} else res.status(400).send(`invalid input try again!!!`);

@@ -12,7 +12,7 @@ const withdraw = (req, res) => {
 		.set("amount", user.amount - +res.locals.amount)
 		.write();
 	res.status(200).send(
-		`The money has been added, the token is: ${req.body.token} and the new balance: ${user.amount}`
+		`The money has been added, the new balance: ${user.amount}`
 	);
 };
 module.exports = withdraw;

@@ -7,6 +7,6 @@ const checkAmount = require("../middleware/checkAmount");
 module.exports = () => {
 	router.post("/transfer", checkAmount, transfer);
 	router.post("/withdraw", checkAmount, withdraw);
-	router.post("/balance", balance);
+	router.get("/balance", balance);
 	return router;
 };

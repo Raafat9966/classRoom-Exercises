@@ -1,52 +1,28 @@
 {
   "users": [
     {
-      "IBAN": "DE2616849622",
-      "pin": "987456",
-      "token": "4f6c0e81-bbdd-469d-ba77-dfaf96cc25ff",
-      "amount": 1400
-    },
-    {
-      "IBAN": "DE261684965",
-      "pin": "987456",
-      "token": "f1379ae8-39b0-40af-bed7-f2bb6334afd7",
-      "amount": 3300
-    },
-    {
-      "IBAN": "DE261684965554",
-      "pin": "987456",
-      "token": "e16dc4d3-cbe7-4552-b7db-7c53bbf4bf99",
-      "amount": 1000
-    },
-    {
-      "IBAN": "DE2616849655",
-      "pin": "987456",
-      "token": "9c23fa7f-e6e0-48e0-bc48-52d161521a3d",
-      "amount": 1000
-    },
-    {
-      "IBAN": "DE261684965557",
-      "pin": "987456",
-      "token": "458ce53c-44c2-4770-9ecf-039a296ab1b6",
-      "amount": 1700
-    },
-    {
-      "IBAN": "DE26168496587",
-      "pin": "987456",
-      "token": "81b524b1-0cda-4d65-b572-900760c1e5b2",
+      "IBAN": "DE0022455",
+      "pin": "221458",
+      "token": "7ea25fee-5ac3-4b52-99cc-9a1bfdb5e462",
       "amount": 1300
     },
     {
-      "IBAN": "DE2616849546587",
-      "pin": "987456",
-      "token": "ac2ebd52-1c7c-4c41-8122-8153c7464699",
+      "IBAN": "DE0002585",
+      "pin": "2258",
+      "token": "7f619295-00b7-4074-a7b2-c94d60c01b2e",
       "amount": 1000
     },
     {
-      "IBAN": "DE0000000000",
-      "pin": "1234",
-      "token": "f4b162d1-d1c2-44a2-9bc3-325d41932b5d",
-      "amount": null
+      "IBAN": "DE000258552",
+      "pin": "22582",
+      "token": "81c65c4d-d5f3-4caf-b6ab-2b1b9da508b6",
+      "amount": 1200
+    },
+    {
+      "IBAN": "DE002255",
+      "pin": "22158",
+      "token": "fd0ed977-90ca-4cdc-b88f-a1c9362176cd",
+      "amount": 1000
     }
   ]
 }
