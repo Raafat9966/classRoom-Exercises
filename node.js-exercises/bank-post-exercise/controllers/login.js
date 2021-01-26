@@ -1,19 +1,29 @@
-const { v4: uuidv4 } = require("uuid");
+//bconst { v4: uuidv4 } = require("uuid");
 const low = require("lowdb");
 const FileSync = require("lowdb/adapters/FileSync");
 
 const adapter = new FileSync("./database/data.json");
 const db = low(adapter);
 
+const jwt = require("jsonwebtoken");
+
 const login = (req, res) => {
 	let IBAN = req.body.IBAN;
 	let pin = req.body.pin;
 	const user = db.get("users").find({ IBAN }).value();
+
 	if (IBAN && pin) {
 		if (user)
 			res.status(400).send(`the user already exited, try to login!!!`);
 		else {
-			let token = uuidv4();
+			const token = jwt.sign(
+				{
+					IBAN,
+					pin,
+				},
+				"secret"
+			);
+
 			res.cookie("token", token)
 				.status(200)
 				.send({ account: req.body, token: token });
