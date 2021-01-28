@@ -18,30 +18,24 @@
 					<div class="limit-box">
 						<nav class="main-menu">
 							<ul class="menu-area-main">
-								<li <% if (pageName === 'home') { %>class="active" <% } %> >
+								<li  class= <%= pageName === "home" ? "active" : "" %>  >
 									<a href="/">Home</a>
 								</li>
 								
-                                <li <% if (pageName === "about") { %>
-                                  class="active" 
-                                    <% } %> >
+                                <li 
+                                  class= <%= pageName === "about" ? "active" : "" %> 
+								>
 									<a href="/about">About</a>
 								</li>
 								
 
-								<li <% if (pageName === "marketing") { %>
-                                  class="active" 
-                                     <% } %> >
+								<li  class= <%= pageName === "marketing" ? "active" : "" %>   >
 									<a href="/marketing">Marketing</a>
 								</li>
-								<li <% if (pageName === "blog") { %>
-                                    class="active" 
-                                     <% } %> >
+								<li class= <%= pageName === "blog" ? "active" : "" %>  >
 									<a href="/blog">Blog</a>
 								</li>
-								<li <% if (pageName === "contact") { %>
-                                   class="active" 
-                                     <% } %> >
+								<li class= <%= pageName === "contact" ? "active" : "" %>  >
 									<a href="/contact">Contact us</a>
 								</li>
 								<li>
