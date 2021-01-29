@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
-const connectionString =
-	"mongodb+srv://raafat:titan666@cluster0.gajnn.gcp.mongodb.net/blog-website?retryWrites=true&w=majority";
+const connectionString = "";
 
 const Schema = mongoose.Schema;
 
