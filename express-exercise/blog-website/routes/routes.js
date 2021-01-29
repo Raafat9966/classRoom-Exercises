@@ -13,6 +13,7 @@ module.exports = () => {
 			})
 			.catch((error) => res.render("blog", { blogs: [] }));
 	});
+
 	router.get("/contact", (req, res) => {
 		res.status(200).render("contact");
 	});
