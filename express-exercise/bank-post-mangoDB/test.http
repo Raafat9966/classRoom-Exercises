@@ -1,0 +1,11 @@
+GET http://localhost:8080/test
+
+###
+POST http://localhost:8080/login
+
+content-type: application/json
+
+{
+    "IBAN":"DE000000000",
+    "pin":"1234"
+}
