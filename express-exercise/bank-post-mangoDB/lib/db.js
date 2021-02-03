@@ -7,8 +7,8 @@ mongoose
 		useUnifiedTopology: true,
 		useNewUrlParser: true,
 	})
-	.then(() => console.log("connected to the mongoDB"))
+	.then(() => console.log("connected to mongoDB"))
 	.catch((err) => {
 		console.log(err);
-		process.exit();
+		process.exit(1);
 	});

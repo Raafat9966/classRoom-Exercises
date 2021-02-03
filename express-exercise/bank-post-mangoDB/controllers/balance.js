@@ -1,12 +1,10 @@
-const low = require("lowdb");
-const FileSync = require("lowdb/adapters/FileSync");
-
-const adapter = new FileSync("./database/data.json");
-const db = low(adapter);
+const Accounts = require("../models/Accounts");
 
 const balance = (req, res) => {
-	const user = db.get("users").find({ token: res.locals.token }).value();
-	if (res.locals.token == user.token)
-		res.status(200).send(`Your balance is: ${user.amount}`);
+	Accounts.getAccount(req.params.pin).then((result) =>
+		res.status(200).json(result[0].balance)
+	);
+
+	// res.status(200).send(`Your balance is: ${user.amount}`);
 };
 module.exports = balance;
