@@ -43,7 +43,8 @@ module.exports = () => {
 				res.send("you are register");
 			})
 			.catch((err) => {
-				res.send(err.message);
+				if (err.code === 11000) res.send("this email has been used");
+				else res.send(err.message);
 			});
 	});
 

@@ -5,11 +5,11 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Launch app.js via nodemon linux",
+			"name": "Launch index.js via nodemon linux",
 			"type": "node",
 			"request": "launch",
 			"runtimeExecutable": "nodemon",
-			"program": "${workspaceFolder}/app.js",
+			"program": "${workspaceFolder}/index.js",
 			"restart": true,
 			"console": "integratedTerminal",
 			"internalConsoleOptions": "neverOpen",
