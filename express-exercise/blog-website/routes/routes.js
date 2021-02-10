@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const db = require("../models/db");
+const userDB = require("../models/user");
 
 module.exports = () => {
 	router.get("/", (req, res) => res.status(200).render("index"));
@@ -14,9 +15,11 @@ module.exports = () => {
 			.catch((error) => res.render("blog", { blogs: [] }));
 	});
 
-	router.get("/contact", (req, res) => {
-		res.status(200).render("contact");
-	});
+	router.get("/contact", (req, res) => res.status(200).render("contact"));
+
+	router.get("/login", (req, res) => res.status(200).render("login"));
+
+	router.get("/register", (req, res) => res.status(200).render("register"));
 
 	router.get("/marketing", (req, res) => res.status(200).render("marketing"));
 
@@ -31,5 +34,18 @@ module.exports = () => {
 			})
 			.catch((error) => res.send(`there is a problem ${error}`));
 	});
+
+	router.post("/register", (req, res) => {
+		let { first_name, last_name, email, password } = req.body;
+		userDB
+			.registerUser(first_name, last_name, email, password)
+			.then((result) => {
+				res.send("you are register");
+			})
+			.catch((err) => {
+				res.send(err.message);
+			});
+	});
+
 	return router;
 };

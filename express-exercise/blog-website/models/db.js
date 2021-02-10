@@ -89,6 +89,7 @@ function getBlog() {
 }
 
 module.exports = {
+	connect,
 	addBlog,
 	getBlog,
 };
