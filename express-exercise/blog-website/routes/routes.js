@@ -48,5 +48,17 @@ module.exports = () => {
 			});
 	});
 
+	router.post("/login", (req, res) => {
+		let { first_name, password } = req.body;
+		userDB
+			.checkUser(first_name, password)
+			.then((result) => {
+				res.send("you are in ");
+			})
+			.catch((err) => {
+				res.send(err);
+			});
+	});
+
 	return router;
 };
