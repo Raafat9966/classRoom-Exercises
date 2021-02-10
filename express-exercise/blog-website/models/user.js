@@ -52,7 +52,7 @@ const registerUser = (first_name, last_name, email, password) => {
 						// console.log(result);
 						res(result);
 					})
-					.catch((error) => reject(error));
+					.catch((error) => rej(error));
 			})
 			.catch((err) => rej(err));
 	});

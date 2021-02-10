@@ -119,7 +119,7 @@
 
 							<input
 								type="submit"
-								id="submit"
+								id="submitBtn"
 								value="Register"
 								class="btn btn-info btn-block"
 							/>
@@ -136,13 +136,30 @@
 		<%- include("partials/scripts") %>
 
 		<!-- <script>
-			document.querySelector("#submit").addEventListener("click", (e) => {
+			document.querySelector("#submitBtn").addEventListener("click", (e) => {
 				e.preventDefault();
-				document.querySelector("#password_confirmation").value !==
-				document.querySelector("#password").value
-					? alert("password not matched")
-					: document.querySelector("#reg-form").submit();
+				let pass = document.querySelector("#password_confirmation")
+					.value;
+				let repass = document.querySelector("#password").value;
+				if (pass !== repass) alert("password not matched");
+				else document.querySelector("#reg-form").submit();
 			});
 		</script> -->
+		<script>
+			document
+				.querySelector("#submitBtn")
+				.addEventListener("click", (e) => {
+					e.preventDefault();
+					const pass = document.querySelector("#password").value;
+					const repass = document.querySelector(
+						"#password_confirmation"
+					).value;
+					if (pass !== repass) {
+						alert("password dose not match the re password");
+					} else {
+						document.querySelector("#reg-form").submit();
+					}
+				});
+		</script>
 	</body>
 </html>
