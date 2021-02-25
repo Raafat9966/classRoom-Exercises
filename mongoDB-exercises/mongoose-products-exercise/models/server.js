@@ -41,7 +41,7 @@ const connect = async () => {
 const addProducts = async (articleNo, name, description, price) => {
 	try {
 		await connect();
-		let newProduct = await new Product({
+		let newProduct = new Product({
 			articleNo,
 			name,
 			description,

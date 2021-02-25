@@ -7,3 +7,4 @@ testing-unit/node_modules/
 Babel-exercise/node_modules/
 npm-debug.log
 testing-unit/package-lock.json
+/node_modules
