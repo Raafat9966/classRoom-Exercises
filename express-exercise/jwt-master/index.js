@@ -34,6 +34,7 @@ app.get("/", (req, res) => {
 app.post("/login", (req, res) => {
 	// Get user parameter from body
 	const { user } = req.body;
+	console.log(req.body);
 	// Find user in users array
 	const findUser = users.find((x) => x.name === user);
 	// Check if user exist
