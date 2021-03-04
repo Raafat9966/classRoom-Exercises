@@ -8,7 +8,7 @@ function Login({ setLogin, login }) {
 					setLogin(!login);
 				}}
 			>
-				login
+				{login ? "logout" : "login"}
 			</button>
 		</div>
 	);
