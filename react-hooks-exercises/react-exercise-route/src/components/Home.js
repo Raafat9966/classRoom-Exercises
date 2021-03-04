@@ -1,7 +1,7 @@
-export default function Home({ name }) {
+export default function Home({ login }) {
 	return (
 		<div>
-			<h1>Welcome {name}</h1>
+			<h1>{login ? "logged in" : "logged out"}</h1>
 		</div>
 	);
 }

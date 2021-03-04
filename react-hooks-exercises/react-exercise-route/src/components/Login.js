@@ -1,9 +1,15 @@
 import React from "react";
 
-function Login() {
+function Login({ setLogin, login }) {
 	return (
 		<div>
-			<h1>Login</h1>
+			<button
+				onClick={() => {
+					setLogin(!login);
+				}}
+			>
+				login
+			</button>
 		</div>
 	);
 }

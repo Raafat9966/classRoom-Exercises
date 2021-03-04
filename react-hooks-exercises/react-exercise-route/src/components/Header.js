@@ -1,20 +1,28 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
 	return (
 		<div>
 			<ul>
 				<li>
-					<Link to="/">Home</Link>
+					<NavLink exact activeClassName="active" to="/">
+						Home
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/login">Login</Link>
+					<NavLink exact activeClassName="active" to="/login">
+						Login
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/products">Products</Link>
+					<NavLink exact activeClassName="active" to="/products">
+						Products
+					</NavLink>
 				</li>
 				<li>
-					<Link to="/products/123">Product Details</Link>
+					<NavLink exact activeClassName="active" to="/products/123">
+						Product Details
+					</NavLink>
 				</li>
 			</ul>
 		</div>
