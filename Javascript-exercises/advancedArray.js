@@ -100,18 +100,18 @@
 // console.log(flatten(nested));
 
 // !Bubble Sorting
-function bubbleSort(array) {
-	for (let i = 0; i < array.length; i++)
-		for (let j = 0; j < array.length; j++) {
-			let item = array[j];
-			var nextItem = array[j + 1];
-			if (item > nextItem) {
-				array[j] = nextItem;
-				array[j + 1] = item;
-			}
-		}
-	return array;
-}
+// function bubbleSort(array) {
+// 	for (let i = 0; i < array.length; i++)
+// 		for (let j = 0; j < array.length; j++) {
+// 			let item = array[j];
+// 			var nextItem = array[j + 1];
+// 			if (item > nextItem) {
+// 				array[j] = nextItem;
+// 				array[j + 1] = item;
+// 			}
+// 		}
+// 	return array;
+// }
 
-console.log(bubbleSort([9, 5, 7, 1, 0, 2, 4, 10, 1, 6, 3, 5, 8]));
-console.log(bubbleSort([900, 5, 70, 0.1, 0, 02, 4, 100, 1, 6, 35, 56, 8]));
+// console.log(bubbleSort([9, 5, 7, 1, 0, 2, 4, 10, 1, 6, 3, 5, 8]));
+// console.log(bubbleSort([900, 5, 70, 0.1, 0, 02, 4, 100, 1, 6, 35, 56, 8]));
